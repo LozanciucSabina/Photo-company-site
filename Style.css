@@ -1,37 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600&display=swap");
-* {
-  margin: 0;
-}
-
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
-.grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[12];
-      grid-template-columns: repeat(12, 1fr);
-}
-
-nav,
-main,
-footer {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
-  grid-column: 1/13;
-}
-
 nav {
   height: 50px;
   background-color: #1b1b1b;
@@ -172,13 +140,13 @@ nav .burger .bar {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 700px;
+  height: 600px;
   color: #fff;
 }
 
 .hero .company-profile-wrapper {
   position: relative;
-  bottom: 7vw;
+  bottom: 5vw;
 }
 
 .hero .company-profile-wrapper:before,
@@ -186,6 +154,7 @@ nav .burger .bar {
   content: "";
   display: block;
   height: 3px;
+  width: 50vw;
   background-color: #e5b13b;
   border-radius: 20px;
 }
@@ -194,22 +163,22 @@ nav .burger .bar {
   text-align: center;
   width: inherit;
   font-family: Cormorant SC;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 65px;
   letter-spacing: 18px;
   text-indent: 18px;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .hero .sub-heading {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   margin-top: 10px;
   font-family: Quicksand;
   font-size: 20px;
   font-weight: 300;
-  letter-spacing: 5px;
-  text-indent: 5px;
+  letter-spacing: 4px;
+  text-indent: 4px;
 }
 
 .hero .hero-contacts {
@@ -225,13 +194,13 @@ nav .burger .bar {
 }
 
 @media only screen and (max-width: 1000px) {
-  .hero .company-name {
-    font-size: 10vw;
+  .hero .company-profile-wrapper:before,
+  .hero .company-profile-wrapper:after {
+    width: auto;
   }
 }
 
 .welcome {
-  height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,5 +214,88 @@ nav .burger .bar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 700px;
+  width: 100vw;
+  background-color: #1b1b1b;
+  color: #fff;
+}
+
+.welcome > * {
+  position: relative;
+  margin-top: 50px;
+}
+
+.welcome .horizontal-line {
+  background-color: #e5b13b;
+  height: 3px;
+  display: block;
+  width: 10%;
+}
+
+.welcome .welcome-heading {
+  font-family: Cormorant SC;
+  font-size: 40px;
+  letter-spacing: 15px;
+}
+
+.welcome .welcome-paragraph {
+  font-family: Quicksand;
+  font-size: 16px;
+  text-align: center;
+  width: 55%;
+}
+
+.welcome button {
+  background-color: #1b1b1b;
+  outline: none;
+  border: 3px solid white;
+  color: #fff;
+  width: 200px;
+  height: 60px;
+  font-family: Cormorant SC;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  height: 650px;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+}
+
+nav,
+main,
+footer {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
 }
 /*# sourceMappingURL=Style.css.map */

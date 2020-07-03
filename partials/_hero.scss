@@ -1,0 +1,75 @@
+
+.hero {
+    @include flex-center;  
+    background: linear-gradient(#1b1b1ba4, #1b1b1ba4), url(./img/hero-image.jpg);
+    @include background-center;
+    height: 600px;
+    color: $text-color;
+  
+    .company-profile-wrapper {
+      position: relative;
+      bottom: 5vw;
+    }
+  
+    .company-profile-wrapper:before,
+    .company-profile-wrapper:after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 50vw;
+      background-color: $accents-color;
+      border-radius: 20px;
+    }
+  
+    .company-name {
+      text-align: center;
+      width: inherit;
+      font-family: $heading-font;
+      font-weight: 400;
+      font-size: 65px;
+      letter-spacing: 18px;
+      text-indent: 18px;
+      margin-top: 40px;
+    }
+  
+    .sub-heading {
+      text-align: center;
+      margin-bottom: 40px;
+      margin-top: 10px;
+      font-family: $paragraph-font;
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: 4px;
+      text-indent: 4px;
+    }
+  
+    .hero-contacts {
+      font-family: $paragraph-font;
+      font-size: 16px;
+      font-weight: 300;
+      flex-wrap: wrap;
+      margin-left: 10vw;
+      margin-right: 10vw;
+      position: relative;
+      text-align: center;
+    }
+  
+    @media only screen and (max-width: 1000px) {
+      // .company-name {
+      //   font-size: 8vw;
+      // }
+      .company-profile-wrapper:before, 
+      .company-profile-wrapper:after{
+        width:auto;
+      }
+    }
+  
+    @media only screen and (max-width: 600px) {
+  
+      // .company-name {
+      //   font-size: 9vw;
+      //   letter-spacing: 15px;
+      // }
+    
+    }
+  }

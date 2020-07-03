@@ -1,0 +1,94 @@
+
+nav {
+    height: 50px;
+    background-color: $main-backgr-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    .logo {
+      display: inline;
+      color: $accents-color;
+      font-family: $heading-font;
+      font-size: 30px;
+      letter-spacing: 5px;
+      text-indent: 5px;
+      position: relative;
+      left: 8%;
+    }
+  
+    .menu {
+      display: inline;
+      font-family: $heading-font;
+      font-size: 15px;
+      font-weight: 600;
+      position: relative;
+      right: 8%;
+  
+      a {
+        margin-right: 30px;
+        text-decoration: none;
+        color: $text-color;
+      }
+  
+      :last-child {
+        margin-right: 0;
+      }
+    }
+  
+    .burger {
+      overflow: none;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      width: auto;
+      position: relative;
+      right: 8%;
+      cursor: pointer;
+  
+      .bar {
+        background-color: $text-color;
+        width: 27px;
+        height: 3px;
+        margin: 2px;
+        border-radius: 10px;
+        transition: all 1s ease;
+      }
+  
+      @keyframes underscored-x {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  
+    @media only screen and (max-width: 1000px) {
+      .menu {
+        display: none;
+      }
+  
+      .burger {
+        display: inline-flex;
+      }
+    }
+  }
+
+
+  .lineAnimation .bar1 {
+    transform: translate(0px, 7px) rotate(-45deg);
+  }
+  
+  .lineAnimation .bar2 {
+    opacity: 0;
+  }
+  
+  .lineAnimation .bar3 {
+    transform: translate(0px, -7px) rotate(45deg);
+  }
+  
+  

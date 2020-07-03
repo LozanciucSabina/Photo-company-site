@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600&display=swap");
+@import 'partials/varsmixins';
+@import 'partials/nav';
+@import 'partials/hero';
+@import 'partials/welcome';
+@import 'partials/gallery';
+@import 'partials/contact-form';
+@import 'partials/footer';
+
+
+
 * {
   margin: 0;
 }
@@ -14,21 +24,7 @@ html {
 *:after {
   box-sizing: inherit;
 }
-//-------------------------------------------------------------------------------------------------------------------------------------
 
-$text-color: #fff;
-$heading-font: Cormorant SC;
-$paragraph-font: Quicksand;
-$accents-color: #e5b13b;
-
-@mixin flex-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-//-------------------------------------------------------------------------------------------------------------------------------------
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -40,168 +36,3 @@ footer {
   grid-column: 1/13;
 }
 
-//-------------------------------------------------------------- Navigation
-
-nav {
-  height: 50px;
-  background-color: #1b1b1b;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  .logo {
-    display: inline;
-    color: $accents-color;
-    font-family: $heading-font;
-    font-size: 30px;
-    letter-spacing: 5px;
-    text-indent: 5px;
-    position: relative;
-    left: 8%;
-  }
-
-  .menu {
-    display: inline;
-    font-family: $heading-font;
-    font-size: 15px;
-    font-weight: 600;
-    position: relative;
-    right: 8%;
-
-    a {
-      margin-right: 30px;
-      text-decoration: none;
-      color: $text-color;
-    }
-
-    :last-child {
-      margin-right: 0;
-    }
-  }
-
-  .burger {
-    overflow: none;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    width: auto;
-    position: relative;
-    right: 8%;
-    cursor: pointer;
-
-    .bar {
-      background-color: $text-color;
-      width: 27px;
-      height: 3px;
-      margin: 2px;
-      border-radius: 10px;
-      transition: all 1s ease;
-    }
-
-    @keyframes underscored-x {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(90deg);
-      }
-    }
-  }
-
-  @media only screen and (max-width: 1000px) {
-    .menu {
-      display: none;
-    }
-
-    .burger {
-      display: inline-flex;
-    }
-  }
-}
-
-.lineAnimation .bar1 {
-  transform: translate(0px, 7px) rotate(-45deg);
-}
-
-.lineAnimation .bar2 {
-  opacity: 0;
-}
-
-.lineAnimation .bar3 {
-  transform: translate(0px, -7px) rotate(45deg);
-}
-
-// ----------------------------------------------------------------Hero
-
-.hero {
-  @include flex-center;
-
-  background: linear-gradient(#1b1b1ba4, #1b1b1ba4), url(./img/hero-image.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 700px;
-  color: $text-color;
-
-  .company-profile-wrapper {
-    position: relative;
-    bottom: 7vw;
-  }
-
-  .company-profile-wrapper:before,
-  .company-profile-wrapper:after {
-    content: "";
-    display: block;
-    height: 3px;
-    background-color: #e5b13b;
-    border-radius: 20px;
-  }
-
-  .company-name {
-    text-align: center;
-    width: inherit;
-    font-family: $heading-font;
-    font-weight: 300;
-    font-size: 65px;
-    letter-spacing: 18px;
-    text-indent: 18px;
-    margin-top: 50px;
-  }
-
-  .sub-heading {
-    text-align: center;
-    margin-bottom: 50px;
-    margin-top: 10px;
-    font-family: $paragraph-font;
-    font-size: 20px;
-    font-weight: 300;
-    letter-spacing: 5px;
-    text-indent: 5px;
-  }
-
-  .hero-contacts {
-    font-family: $paragraph-font;
-    font-size: 16px;
-    font-weight: 300;
-    flex-wrap: wrap;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    position: relative;
-    text-align: center;
-  }
-
-  @media only screen and (max-width: 1000px) {
-    .company-name {
-      font-size: 10vw;
-    }
-  }
-}
-
-//-----------------------------------------------------------------Welcome
-
-.welcome {
-  height: 600px;
-  @include flex-center;
-}

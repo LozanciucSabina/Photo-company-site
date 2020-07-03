@@ -1,0 +1,22 @@
+$text-color: #fff;
+$main-backgr-color: #1b1b1b;
+$accents-color: #e5b13b;
+
+$heading-font: Cormorant SC;
+$paragraph-font: Quicksand;
+
+$min_width: 300px;
+$max_width: 3900px;
+
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin background-center {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

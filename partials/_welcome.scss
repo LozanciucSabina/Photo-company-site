@@ -1,0 +1,45 @@
+.welcome {
+  @include flex-center;
+
+  height: 700px;
+  width: 100vw;
+  background-color: $main-backgr-color;
+  color: $text-color;
+
+  & > * {
+    position: relative;
+    margin-top: 50px;
+  }
+
+  .horizontal-line {
+    background-color: $accents-color;
+    height: 3px;
+    display: block;
+    width: 10%;
+  }
+
+  .welcome-heading {
+    font-family: $heading-font;
+    font-size: 40px;
+    letter-spacing: 15px;
+  }
+
+  .welcome-paragraph {
+    font-family: $paragraph-font;
+    font-size: 16px;
+    text-align: center;
+    width: 55%;
+  }
+
+  button {
+    background-color: $main-backgr-color;
+    outline: none;
+    border: 3px solid white;
+    color: $text-color;
+    width: 200px;
+    height: 60px;
+    font-family: $heading-font;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
