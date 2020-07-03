@@ -26,6 +26,12 @@ html {
 }
 
 .grid {
+    @include fluid-font(16px, 40px); //give min max size range 
+    //@include fluid-font(1.875em, 5.625em); //also can use em values
+    
+}
+
+body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600&display=swap");
+/* SASS mixin end */
 nav {
   height: 50px;
   background-color: #1b1b1b;
@@ -140,7 +141,7 @@ nav .burger .bar {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 600px;
+  height: 29em;
   color: #fff;
 }
 
@@ -164,9 +165,9 @@ nav .burger .bar {
   width: inherit;
   font-family: Cormorant SC;
   font-weight: 400;
-  font-size: 65px;
-  letter-spacing: 18px;
-  text-indent: 18px;
+  font-size: 3.4em;
+  letter-spacing: 0.3em;
+  text-indent: 0.3em;
   margin-top: 40px;
 }
 
@@ -175,7 +176,7 @@ nav .burger .bar {
   margin-bottom: 40px;
   margin-top: 10px;
   font-family: Quicksand;
-  font-size: 20px;
+  font-size: 1em;
   font-weight: 300;
   letter-spacing: 4px;
   text-indent: 4px;
@@ -183,7 +184,7 @@ nav .burger .bar {
 
 .hero .hero-contacts {
   font-family: Quicksand;
-  font-size: 16px;
+  font-size: 0.7em;
   font-weight: 300;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -285,6 +286,23 @@ html {
 }
 
 .grid {
+  font-size: 40px;
+  font-size: calc(16px + (40 - 16) * ((100vw - 300px) / (3840 - 300)));
+}
+
+@media screen and (max-width: 300px) {
+  .grid {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 3840px) {
+  .grid {
+    font-size: 40px;
+  }
+}
+
+body {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[12];
