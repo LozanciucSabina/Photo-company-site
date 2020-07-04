@@ -19,6 +19,8 @@
       width: 50vw;
       background-color: $accents-color;
       border-radius: 20px;
+      margin-top: 2.5em;
+      margin-bottom: 2.5em;
     }
   
     .company-name {
@@ -26,18 +28,15 @@
       width: inherit;
       font-family: $heading-font;
       font-weight: 400;
-      font-size: 3.4em;
+      font-size: 3em;
       letter-spacing: 0.3em;
       text-indent: 0.3em;
-      margin-top: 40px;
     }
   
     .sub-heading {
       text-align: center;
-      margin-bottom: 40px;
-      margin-top: 10px;
       font-family: $paragraph-font;
-      font-size: 1em;
+      font-size: 0.9em;
       font-weight: 300;
       letter-spacing: 4px;
       text-indent: 4px;
@@ -51,6 +50,7 @@
       margin-left: 10vw;
       margin-right: 10vw;
       position: relative;
+      bottom: 2.5em;
       text-align: center;
     }
   

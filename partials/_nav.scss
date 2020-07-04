@@ -1,6 +1,6 @@
 
 nav {
-    height: 50px;
+    height: 3em;
     background-color: $main-backgr-color;
     display: flex;
     justify-content: space-between;
@@ -10,9 +10,9 @@ nav {
       display: inline;
       color: $accents-color;
       font-family: $heading-font;
-      font-size: 30px;
-      letter-spacing: 5px;
-      text-indent: 5px;
+      font-size: 1.5em;
+      letter-spacing: 0.2em;
+      text-indent: 0.2em;
       position: relative;
       left: 8%;
     }
@@ -20,13 +20,13 @@ nav {
     .menu {
       display: inline;
       font-family: $heading-font;
-      font-size: 15px;
+      font-size: 0.7em;
       font-weight: 600;
       position: relative;
       right: 8%;
   
       a {
-        margin-right: 30px;
+        margin-right: 2em;
         text-decoration: none;
         color: $text-color;
       }
@@ -49,11 +49,11 @@ nav {
       cursor: pointer;
   
       .bar {
-        background-color: $text-color;
-        width: 27px;
+        background-color: $accents-color;
+        width: 1.3em;
         height: 3px;
         margin: 2px;
-        border-radius: 10px;
+        border-radius: 20px;
         transition: all 1s ease;
       }
   

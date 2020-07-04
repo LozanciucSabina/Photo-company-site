@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600&display=swap");
 /* SASS mixin end */
 nav {
-  height: 50px;
+  height: 3em;
   background-color: #1b1b1b;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19,9 +19,9 @@ nav .logo {
   display: inline;
   color: #e5b13b;
   font-family: Cormorant SC;
-  font-size: 30px;
-  letter-spacing: 5px;
-  text-indent: 5px;
+  font-size: 1.5em;
+  letter-spacing: 0.2em;
+  text-indent: 0.2em;
   position: relative;
   left: 8%;
 }
@@ -29,14 +29,14 @@ nav .logo {
 nav .menu {
   display: inline;
   font-family: Cormorant SC;
-  font-size: 15px;
+  font-size: 0.7em;
   font-weight: 600;
   position: relative;
   right: 8%;
 }
 
 nav .menu a {
-  margin-right: 30px;
+  margin-right: 2em;
   text-decoration: none;
   color: #fff;
 }
@@ -66,11 +66,11 @@ nav .burger {
 }
 
 nav .burger .bar {
-  background-color: #fff;
-  width: 27px;
+  background-color: #e5b13b;
+  width: 1.3em;
   height: 3px;
   margin: 2px;
-  border-radius: 10px;
+  border-radius: 20px;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
@@ -158,6 +158,8 @@ nav .burger .bar {
   width: 50vw;
   background-color: #e5b13b;
   border-radius: 20px;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
 }
 
 .hero .company-name {
@@ -165,18 +167,15 @@ nav .burger .bar {
   width: inherit;
   font-family: Cormorant SC;
   font-weight: 400;
-  font-size: 3.4em;
+  font-size: 3em;
   letter-spacing: 0.3em;
   text-indent: 0.3em;
-  margin-top: 40px;
 }
 
 .hero .sub-heading {
   text-align: center;
-  margin-bottom: 40px;
-  margin-top: 10px;
   font-family: Quicksand;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: 300;
   letter-spacing: 4px;
   text-indent: 4px;
@@ -191,6 +190,7 @@ nav .burger .bar {
   margin-left: 10vw;
   margin-right: 10vw;
   position: relative;
+  bottom: 2.5em;
   text-align: center;
 }
 
@@ -215,7 +215,7 @@ nav .burger .bar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 700px;
+  height: 30em;
   width: 100vw;
   background-color: #1b1b1b;
   color: #fff;
@@ -228,7 +228,8 @@ nav .burger .bar {
 
 .welcome .horizontal-line {
   background-color: #e5b13b;
-  height: 3px;
+  height: 0.123em;
+  border-radius: 1em;
   display: block;
   width: 10%;
 }
@@ -241,9 +242,10 @@ nav .burger .bar {
 
 .welcome .welcome-paragraph {
   font-family: Quicksand;
-  font-size: 16px;
+  font-size: 0.7em;
   text-align: center;
   width: 55%;
+  line-height: 1.5em;
 }
 
 .welcome button {
@@ -254,17 +256,16 @@ nav .burger .bar {
   width: 200px;
   height: 60px;
   font-family: Cormorant SC;
-  font-size: 18px;
+  font-size: 0.8em;
+  letter-spacing: 0.09em;
   font-weight: 400;
 }
 
 .gallery {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
+  -ms-grid-columns: (minmax(30em, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
   height: 650px;
 }
 
@@ -285,24 +286,24 @@ html {
           box-sizing: inherit;
 }
 
-.grid {
+body {
   font-size: 40px;
   font-size: calc(16px + (40 - 16) * ((100vw - 300px) / (3840 - 300)));
 }
 
 @media screen and (max-width: 300px) {
-  .grid {
+  body {
     font-size: 16px;
   }
 }
 
 @media screen and (min-width: 3840px) {
-  .grid {
+  body {
     font-size: 40px;
   }
 }
 
-body {
+.grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[12];
