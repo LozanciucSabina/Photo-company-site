@@ -223,7 +223,7 @@ nav .burger .bar {
 
 .welcome > * {
   position: relative;
-  margin-top: 50px;
+  margin-top: 1em;
 }
 
 .welcome .horizontal-line {
@@ -231,18 +231,19 @@ nav .burger .bar {
   height: 0.123em;
   border-radius: 1em;
   display: block;
-  width: 10%;
+  width: 5em;
 }
 
 .welcome .welcome-heading {
   font-family: Cormorant SC;
-  font-size: 40px;
-  letter-spacing: 15px;
+  font-size: 1.8em;
+  letter-spacing: 0.2em;
+  text-indent: 0.2em;
 }
 
 .welcome .welcome-paragraph {
   font-family: Quicksand;
-  font-size: 0.7em;
+  font-size: 0.75em;
   text-align: center;
   width: 55%;
   line-height: 1.5em;
@@ -251,22 +252,101 @@ nav .burger .bar {
 .welcome button {
   background-color: #1b1b1b;
   outline: none;
-  border: 3px solid white;
+  border: 0.2em solid white;
   color: #fff;
-  width: 200px;
+  width: 9em;
   height: 60px;
   font-family: Cormorant SC;
   font-size: 0.8em;
-  letter-spacing: 0.09em;
   font-weight: 400;
+  letter-spacing: 0.09em;
+  margin-top: 2.7em;
 }
 
 .gallery {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(30em, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
-  height: 650px;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  color: #fff;
+}
+
+.gallery .photo-category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20em;
+  text-align: center;
+}
+
+.gallery .photo-category .horizontal-line {
+  background-color: #e5b13b;
+  height: 0.123em;
+  border-radius: 1em;
+  display: block;
+  width: 9em;
+}
+
+.gallery .photo-category .category-name {
+  font-family: Cormorant SC;
+  font-size: 1.8em;
+  letter-spacing: 0.2em;
+  text-indent: 0.2em;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+@media screen and (max-width: 750px) {
+  .gallery {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1b1b1b;
+}
+
+.contact-form .horizontal-line {
+  background-color: #e5b13b;
+  height: 0.123em;
+  border-radius: 1em;
+  display: block;
+  width: 5em;
+}
+
+.contact-form input {
+  width: 30em;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0.123em;
+  border-color: #e5b13b;
 }
 
 * {
@@ -276,7 +356,6 @@ nav .burger .bar {
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 *,
@@ -288,7 +367,8 @@ html {
 
 body {
   font-size: 40px;
-  font-size: calc(16px + (40 - 16) * ((100vw - 300px) / (3840 - 300)));
+  font-size: calc( 16px + (40 - 16) * ((100vw - 300px) / (3840 - 300)));
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 300px) {

@@ -1,0 +1,20 @@
+.contact-form {
+  @include flex-center;
+
+  background-color: $main-backgr-color;
+
+  .horizontal-line {
+    @include line;
+  }
+
+  input {
+    width: 30em;
+    border: {
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    border-bottom: 0.123em;
+    border-color: $accents-color;
+  }
+}
