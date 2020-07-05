@@ -1,20 +1,57 @@
-.contact-form {
+.contact-form-wrapper {
   @include flex-center;
-
+  color: $text-color;
   background-color: $main-backgr-color;
+  height: 100vh;
 
   .horizontal-line {
     @include line;
+    margin-bottom: 1em;
   }
 
-  input {
-    width: 30em;
-    border: {
-      top: 0;
-      left: 0;
-      right: 0;
+  .contact-heading {
+    @include heading-style();
+    margin-bottom: 1em;
+  }
+
+  form {
+    @include flex-center;
+
+    font: {
+      family: $paragraph-font;
+      size: 0.9em;
     }
-    border-bottom: 0.123em;
-    border-color: $accents-color;
+
+    .horizontal-line {
+      width: 26em;
+      background-color: $accents-color;
+      height: 0.123em;
+      margin-bottom: 1.5em;
+    }
+
+    input:not([type="button"]),
+    textarea {
+      font: {
+        family: $paragraph-font;
+        size: 0.9em;
+      }
+
+      line-height: 1.5em;
+      width: 30em;
+      height: 2em;
+      background-color: $main-backgr-color;
+      border: none;
+      outline: none;
+      text-align: center;
+    }
+
+    textarea {
+      height: 5em;
+    }
+
+    input[type="button"] {
+      @include button-style;
+      margin: 0;
+    }
   }
 }

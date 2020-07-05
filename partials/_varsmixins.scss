@@ -16,9 +16,11 @@ $max_width: 3900px;
 }
 
 @mixin background-center {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: {
+    position: center;
+    size: cover;
+    repeat: no-repeat;
+  }
 }
 
 /// $min - Minimum font size (px, rem)

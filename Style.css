@@ -245,22 +245,23 @@ nav .burger .bar {
   font-family: Quicksand;
   font-size: 0.75em;
   text-align: center;
-  width: 55%;
   line-height: 1.5em;
+  width: 55%;
 }
 
 .welcome button {
   background-color: #1b1b1b;
   outline: none;
-  border: 0.2em solid white;
+  border: 0.09em solid white;
   color: #fff;
   width: 9em;
   height: 60px;
   font-family: Cormorant SC;
-  font-size: 0.8em;
+  font-size: 0.7em;
   font-weight: 400;
   letter-spacing: 0.09em;
   margin-top: 2.7em;
+  cursor: pointer;
 }
 
 .gallery {
@@ -315,7 +316,7 @@ nav .burger .bar {
   }
 }
 
-.contact-form {
+.contact-form-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,10 +330,110 @@ nav .burger .bar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #fff;
   background-color: #1b1b1b;
+  height: 100vh;
 }
 
-.contact-form .horizontal-line {
+.contact-form-wrapper .horizontal-line {
+  background-color: #e5b13b;
+  height: 0.123em;
+  border-radius: 1em;
+  display: block;
+  width: 5em;
+  margin-bottom: 1em;
+}
+
+.contact-form-wrapper .contact-heading {
+  font-family: Cormorant SC;
+  font-size: 1.8em;
+  letter-spacing: 0.2em;
+  text-indent: 0.2em;
+  margin-bottom: 1em;
+}
+
+.contact-form-wrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Quicksand;
+  font-size: 0.9em;
+}
+
+.contact-form-wrapper form .horizontal-line {
+  width: 26em;
+  background-color: #e5b13b;
+  height: 0.123em;
+  margin-bottom: 1.5em;
+}
+
+.contact-form-wrapper form input:not([type="button"]),
+.contact-form-wrapper form textarea {
+  font-family: Quicksand;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  width: 30em;
+  height: 2em;
+  background-color: #1b1b1b;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.contact-form-wrapper form textarea {
+  height: 5em;
+}
+
+.contact-form-wrapper form input[type="button"] {
+  background-color: #1b1b1b;
+  outline: none;
+  border: 0.09em solid white;
+  color: #fff;
+  width: 9em;
+  height: 60px;
+  font-family: Cormorant SC;
+  font-size: 0.7em;
+  font-weight: 400;
+  letter-spacing: 0.09em;
+  margin-top: 2.7em;
+  cursor: pointer;
+  margin: 0;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left bottom, left top, from(#1b1b1bc0), to(#1b1b1bc0)), url("./img/footer-image.jpg");
+  background: linear-gradient(0deg, #1b1b1bc0, #1b1b1bc0), url("./img/footer-image.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  height: 90vh;
+}
+
+footer .horizontal-line {
   background-color: #e5b13b;
   height: 0.123em;
   border-radius: 1em;
@@ -340,13 +441,55 @@ nav .burger .bar {
   width: 5em;
 }
 
-.contact-form input {
-  width: 30em;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 0.123em;
-  border-color: #e5b13b;
+footer button {
+  background-color: #1b1b1b;
+  outline: none;
+  border: 0.09em solid white;
+  color: #fff;
+  width: 9em;
+  height: 60px;
+  font-family: Cormorant SC;
+  font-size: 0.7em;
+  font-weight: 400;
+  letter-spacing: 0.09em;
+  margin-top: 2.7em;
+  cursor: pointer;
+  background-color: transparent;
+  margin-right: 1em;
+}
+
+footer .buttons-wrapper {
+  margin-bottom: 1em;
+}
+
+footer .footer-heading {
+  font-family: Cormorant SC;
+  font-size: 1.8em;
+  letter-spacing: 0.2em;
+  text-indent: 0.2em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+footer .contact-info {
+  font-family: Quicksand;
+  font-size: 0.75em;
+  text-align: center;
+  line-height: 1.5em;
+  width: 15em;
+}
+
+footer .copyrights {
+  color: #fff;
+  font-family: Quicksand;
+  font-size: 0.75em;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+footer a {
+  color: #e5b13b;
+  text-decoration: none;
 }
 
 * {

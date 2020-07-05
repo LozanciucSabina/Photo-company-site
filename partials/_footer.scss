@@ -1,0 +1,42 @@
+footer {
+  @include flex-center;
+  background: linear-gradient(0deg, #1b1b1bc0, #1b1b1bc0),
+    url("./img/footer-image.jpg");
+  @include background-center;
+  color: $text-color;
+  height: 90vh;
+  .horizontal-line {
+    @include line;
+  }
+
+  button {
+    @include button-style;
+    background-color: transparent;
+
+    margin-right: 1em;
+  }
+
+  .buttons-wrapper {
+    margin-bottom: 1em;
+  }
+
+  .footer-heading {
+    @include heading-style;
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+
+  .contact-info {
+    @include text-paragraphs;
+    width: 15em;
+  }
+
+  .copyrights {
+    color: $text-color;
+    @include text-paragraphs;
+  }
+  a {
+    color: $accents-color;
+    text-decoration: none;
+  }
+}
