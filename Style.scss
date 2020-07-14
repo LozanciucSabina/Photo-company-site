@@ -25,10 +25,14 @@ html {
   box-sizing: inherit;
 }
 
-body {
+body, html {
     @include fluid-font(16px, 40px); //give min max size range 
     //@include fluid-font(1.875em, 5.625em); //also can use em values
-    overflow-x: hidden;
+    
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .grid {

@@ -5,10 +5,11 @@
     @include background-center;
     height: 29em;
     color: $text-color;
+    width: 100vw;
   
     .company-profile-wrapper {
       position: relative;
-      bottom: 5vw;
+     
     }
   
     .company-profile-wrapper:before,
@@ -50,7 +51,7 @@
       margin-left: 10vw;
       margin-right: 10vw;
       position: relative;
-      bottom: 2.5em;
+      
       text-align: center;
     }
   
