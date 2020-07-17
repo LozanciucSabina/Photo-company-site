@@ -1,43 +1,43 @@
 @mixin line {
   background-color: $accents-color;
-  height: 0.123em;
+  height: 0.123rem;
   border-radius: 1em;
   display: block;
-  width: 5em;
+  width: 5rem;
 }
 
 @mixin button-style {
   background-color: $main-backgr-color;
   outline: none;
-  border: 0.09em solid white;
+  border: 0.09rem solid white;
   color: $text-color;
-  width: 9em;
-  height: 60px;
+  width: 9rem;
+  height: 4rem;
   font-family: $heading-font;
   font-size: 0.7em;
   font-weight: 400;
-  letter-spacing: 0.09em;
-  margin-top: 2.7em;
+  letter-spacing: 0.09rem;
+  margin-top: 2.7rem;
   cursor: pointer;
 }
 
 @mixin heading-style {
   font-family: $heading-font;
   font-size: 1.8em;
-  letter-spacing: 0.2em;
-  text-indent: 0.2em;
+  letter-spacing: 0.2rem;
+  text-indent: 0.2rem;
 }
 
 @mixin text-paragraphs {
   font-family: $paragraph-font;
   font-size: 0.75em;
   text-align: center;
-  line-height: 1.5em;
+  line-height: 1.5rem;
 }
 .welcome {
   @include flex-center;
 
-  height: 30em;
+  height: 30rem;
   width: 100vw;
   background-color: $main-backgr-color;
   color: $text-color;
