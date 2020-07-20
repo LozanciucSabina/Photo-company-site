@@ -10,7 +10,7 @@ footer {
   }
 
   button {
-    @include button-style;
+    @include button-style(7rem, 2.3rem);
     background-color: transparent;
 
     margin-right: 1em;
@@ -21,19 +21,20 @@ footer {
   }
 
   .footer-heading {
-    @include heading-style;
-    margin-bottom: 1em;
-    margin-top: 1em;
+    @include heading-style(1.6em, 0.3em);
+    margin-bottom: 1rem;
+    margin-top: 1.3rem;
   }
 
   .contact-info {
-    @include text-paragraphs;
+    @include text-paragraphs(0.5em, 0.3em, 1.7em);
     width: 15em;
+    margin-bottom: 2rem;
   }
 
   .copyrights {
     color: $text-color;
-    @include text-paragraphs;
+    @include text-paragraphs(0.5em);
   }
   a {
     color: $accents-color;

@@ -1,66 +1,31 @@
-@mixin line {
-  background-color: $accents-color;
-  height: 0.123rem;
-  border-radius: 1em;
-  display: block;
-  width: 5rem;
-}
-
-@mixin button-style {
-  background-color: $main-backgr-color;
-  outline: none;
-  border: 0.09rem solid white;
-  color: $text-color;
-  width: 9rem;
-  height: 4rem;
-  font-family: $heading-font;
-  font-size: 0.7em;
-  font-weight: 400;
-  letter-spacing: 0.09rem;
-  margin-top: 2.7rem;
-  cursor: pointer;
-}
-
-@mixin heading-style {
-  font-family: $heading-font;
-  font-size: 1.8em;
-  letter-spacing: 0.2rem;
-  text-indent: 0.2rem;
-}
-
-@mixin text-paragraphs {
-  font-family: $paragraph-font;
-  font-size: 0.75em;
-  text-align: center;
-  line-height: 1.5rem;
-}
 .welcome {
   @include flex-center;
-
-  height: 30rem;
   width: 100vw;
   background-color: $main-backgr-color;
   color: $text-color;
 
-  & > * {
-    position: relative;
-    margin-top: 1em;
-  }
+  // & > * {
+  //   position: relative;
+  //   margin-top: 1em;
+  // }
 
   .horizontal-line {
     @include line;
+    margin-bottom: 1.6rem;
   }
 
   .welcome-heading {
-    @include heading-style();
+    @include heading-style(1.6em, 0.6rem);
+    margin-bottom: 2rem;
   }
 
   .welcome-paragraph {
-    @include text-paragraphs();
+    @include text-paragraphs(0.5em, 0.2em, 1.5em);
     width: 55%;
+    margin-bottom: 1.5rem;
   }
 
   button {
-    @include button-style;
+    @include button-style(7.2rem, 2.3rem);
   }
 }

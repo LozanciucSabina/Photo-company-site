@@ -5,8 +5,9 @@ $accents-color: #e5b13b;
 $heading-font: Cormorant SC;
 $paragraph-font: Quicksand;
 
-$min_width: 300px;
-$max_width: 3900px;
+$breakpoint-mobile: 600px;
+$breakpoint-tablet: 900px;
+$breakpoint-tablet-landscape: 1200px;
 
 @mixin flex-center {
   display: flex;
@@ -21,6 +22,52 @@ $max_width: 3900px;
     size: cover;
     repeat: no-repeat;
   }
+}
+
+@mixin line {
+  background-color: $accents-color;
+  height: 0.123rem;
+  border-radius: 1em;
+  display: block;
+  width: 5.3rem;
+}
+
+@mixin button-style($width: 1rem, $height: 1rem) {
+  background-color: $main-backgr-color;
+  outline: none;
+  border: 0.02rem solid white;
+  color: $text-color;
+  width: $width;
+  height: $height;
+  font: {
+    family: $heading-font;
+    size: 0.55em;
+    weight: 400;
+  }
+  letter-spacing: 0.02rem;
+  cursor: pointer;
+}
+
+@mixin heading-style($f-size: 1em, $letter-spacing: 0.1em) {
+  font: {
+    family: $heading-font;
+    size: $f-size;
+  }
+  letter-spacing: $letter-spacing;
+  text-indent: $letter-spacing;
+}
+
+@mixin text-paragraphs(
+  $f-size: 1em,
+  $letter-spacing: 0.1em,
+  $line-height: 1em
+) {
+  font: {
+    family: $paragraph-font;
+    size: $f-size;
+  }
+  text-align: center;
+  line-height: $line-height;
 }
 
 /// $min - Minimum font size (px, rem)

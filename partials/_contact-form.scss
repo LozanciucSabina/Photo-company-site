@@ -6,12 +6,12 @@
 
   .horizontal-line {
     @include line;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
   }
 
   .contact-heading {
-    @include heading-style();
-    margin-bottom: 1rem;
+    @include heading-style(1.6em, 0.6rem);
+    margin-bottom: 0.8rem;
   }
 
   form {
@@ -25,20 +25,20 @@
     .horizontal-line {
       width: 100%;
       background-color: $accents-color;
-      height: 0.123rem;
-      margin-bottom: 1.5rem;
+      height: 0.05rem;
+      margin-bottom: 0.8rem;
     }
 
     input:not([type="button"]),
     textarea {
       font: {
         family: $paragraph-font;
-        size: 0.9em;
+        size: 0.55em;
       }
       color: white;
-      line-height: 1.5rem;
+      line-height: 1rem;
       width: 75%;
-      height: 2rem;
+      height: 1.5rem;
       background-color: $main-backgr-color;
       border: none;
       outline: none;
@@ -46,17 +46,16 @@
     }
 
     textarea {
-      min-height: 5rem;
-      max-height: 8rem;
-      min-width: 60vw;
-      max-width: 80vw;
-
+      min-height: 4.5rem;
+      max-height: 7rem;
+      max-width: 21rem;
+      min-width: 21rem;
       overflow-x: hidden;
     }
 
     input[type="button"] {
-      @include button-style;
-      margin: 0;
+      @include button-style(5rem, 2.3rem);
+      margin-top: 0.7rem;
     }
   }
 }
