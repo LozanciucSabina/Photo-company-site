@@ -79,7 +79,11 @@ $breakpoint-tablet-landscape: 1200px;
   $min,
   $max,
   $min-vw: 300px,
+<<<<<<< HEAD
   $max-vw: 2560px,
+=======
+  $max-vw: 3440px,
+>>>>>>> d2277948e2691f2152a72986ebe9f40a570656b6
   $fallback: false
 ) {
   $min-no-unit: strip-units($min);

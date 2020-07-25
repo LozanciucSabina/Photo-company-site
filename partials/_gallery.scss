@@ -8,7 +8,7 @@
     @include flex-center;
     height: 20em;
     text-align: center;
-
+   
     .horizontal-line {
       background-color: $accents-color;
       height: 0.09em;
@@ -29,7 +29,40 @@
         bottom: 1.1em;
       }
     }
+
+    &:hover {
+      :first-child {
+        transform: translateX(3rem);
+
+      }
+      :last-child {
+        transform: translateX(-3rem);
+      }
+      :first-child, :last-child, .category-name {
+        animation: fade 1s ease forwards;
+        transition: {
+          property: transform;
+          duration: 1s;
+          timing-function: ease;
+          
+        }
+      }
+    }
+
+  @keyframes fade {
+    0% {
+      opacity: 1;
+    }
+  
+    50% {
+      opacity: 0.5;
+    }
+
+    100%{
+      opacity: 0;
+    }
   }
+}
 
   @media screen and (max-width: 750px) {
     grid-template-columns: 1fr;
