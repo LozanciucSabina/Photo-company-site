@@ -1,5 +1,4 @@
 .hero {
-<<<<<<< HEAD
   @include flex-center;
 
   background: linear-gradient(#1b1b1ba4, #1b1b1ba4), url(./img/hero-image.jpg);
@@ -55,18 +54,6 @@
       family: $paragraph-font;
       size: 0.5em;
       weight: 300;
-=======
-    @include flex-center;  
-    background: linear-gradient(#1b1b1ba4, #1b1b1ba4), url(./img/hero-image.jpg);
-    @include background-center;
-    height: 29em;
-    color: $text-color;
-    width: 100vw;
-  
-    .company-profile-wrapper {
-      position: relative;
-     
->>>>>>> d2277948e2691f2152a72986ebe9f40a570656b6
     }
     flex-wrap: wrap;
     margin-left: 10vw;
@@ -94,17 +81,7 @@
 
     .hero-contacts {
       font-size: 0.7em;
-<<<<<<< HEAD
       width: 20rem;
-=======
-      font-weight: 300;
-      flex-wrap: wrap;
-      margin-left: 10vw;
-      margin-right: 10vw;
-      position: relative;
-      
-      text-align: center;
->>>>>>> d2277948e2691f2152a72986ebe9f40a570656b6
     }
   }
 }

@@ -1,60 +1,8 @@
-<<<<<<< HEAD
-=======
-@mixin line {
-  background-color: $accents-color;
-  height: 0.123em;
-  border-radius: 1em;
-  display: block;
-  width: 5em;
-}
-
-@mixin button-style {
-  background-color: $main-backgr-color;
-  outline: none;
-  border: 0.09em solid white;
-  color: $text-color;
-  width: 9em;
-  height: 60px;
-  font-family: $heading-font;
-  font-size: 0.7em;
-  font-weight: 400;
-  letter-spacing: 0.09em;
-  margin-top: 2.7em;
-  cursor: pointer;
-  transition: box-shadow 0.5s ease;
-
-  &:hover {
-    border-color: $accents-color;
-    color: $accents-color;
-  }
-  
-  &:active {
-    background-color: $accents-color;
-    color:white;
-    border-color: white;
-  }
-}
-
-@mixin heading-style {
-  font-family: $heading-font;
-  font-size: 1.8em;
-  letter-spacing: 0.2em;
-  text-indent: 0.2em;
-}
-
-@mixin text-paragraphs {
-  font-family: $paragraph-font;
-  font-size: 0.75em;
-  text-align: center;
-  line-height: 1.5em;
-}
->>>>>>> d2277948e2691f2152a72986ebe9f40a570656b6
 .welcome {
   @include flex-center;
   width: 100vw;
   background-color: $main-backgr-color;
   color: $text-color;
-  position: relative;
 
   // & > * {
   //   position: relative;

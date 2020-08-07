@@ -23,19 +23,9 @@ html {
   box-sizing: inherit;
 }
 
-<<<<<<< HEAD
 body {
   @include fluid-font(16px, 50px); //give min max size range
   //@include fluid-font(1.875em, 5.625em); //also can use em values
-=======
-body, html {
-    @include fluid-font(16px, 40px); //give min max size range 
-    //@include fluid-font(1.875em, 5.625em); //also can use em values
-    
-}
-
-body {
->>>>>>> d2277948e2691f2152a72986ebe9f40a570656b6
   overflow-x: hidden;
 }
 
