@@ -10,11 +10,17 @@
     text-align: center;
 
     .horizontal-line {
+      position: relative;
       background-color: $accents-color;
       height: 0.09em;
       border-radius: 1em;
       display: block;
       width: 4.7em;
+      transition: {
+        property: left, right;
+        duration: 0.5s;
+        timing-function: ease;
+      }
     }
 
     .category-name {

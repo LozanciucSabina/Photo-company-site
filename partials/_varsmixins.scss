@@ -46,6 +46,19 @@ $breakpoint-tablet-landscape: 1200px;
   }
   letter-spacing: 0.02rem;
   cursor: pointer;
+  &:hover {
+    border-color: $accents-color;
+    color: $accents-color;
+  }
+  &:active {
+    box-shadow: 0px 0px 5px $accents-color;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    & {
+      font-size: 0.75em;
+    }
+  }
 }
 
 @mixin heading-style($f-size: 1em, $letter-spacing: 0.1em) {

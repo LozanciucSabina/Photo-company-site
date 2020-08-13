@@ -37,25 +37,71 @@
       }
       color: white;
       line-height: 1rem;
-      width: 75%;
-      height: 1.5rem;
+      height: 1.7rem;
       background-color: $main-backgr-color;
       border: none;
       outline: none;
       text-align: center;
+      width: 22rem;
+      resize: none;
     }
 
     textarea {
-      min-height: 4.5rem;
       max-height: 7rem;
-      max-width: 21rem;
-      min-width: 21rem;
+      min-height: 5rem;
       overflow-x: hidden;
     }
 
     input[type="button"] {
-      @include button-style(5rem, 2.3rem);
+      @include button-style(7.2rem, 2.3rem);
       margin-top: 0.7rem;
+    }
+  }
+  @media only screen and (max-width: $breakpoint-tablet-landscape) {
+    & {
+      .contact-heading {
+        font-size: 1.7em;
+      }
+
+      form {
+        input:not([type="button"]),
+        textarea {
+          font-size: 0.65em;
+          line-height: 1.3rem;
+          width: 20rem;
+          height: 1.6rem;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $breakpoint-tablet) {
+    & {
+      form {
+        input:not([type="button"]),
+        textarea {
+          font-size: 0.7em;
+          line-height: 1.5rem;
+          height: 1.7rem;
+          width: 24rem;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $breakpoint-mobile) {
+    & {
+      .contact-heading {
+        font-size: 2em;
+      }
+
+      form {
+        input:not([type="button"]),
+        textarea {
+          font-size: 0.8em;
+          line-height: 2rem;
+          height: 2.5rem;
+          width: 20rem;
+        }
+      }
     }
   }
 }

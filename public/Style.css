@@ -19,30 +19,31 @@ nav {
 
 nav .logo {
   color: #e5b13b;
-  font-family: Cormorant SC;
-  font-size: 1.1em;
   letter-spacing: 0.2rem;
   text-indent: 0.2rem;
+  cursor: default;
   position: relative;
   left: 8%;
+  font-family: Cormorant SC;
+  font-size: 1.1em;
 }
 
 nav .menu {
   font-family: Cormorant SC;
-  font-size: 0.5em;
+  font-size: 0.52em;
   font-weight: 600;
   position: relative;
   right: 8%;
 }
 
 nav .menu a {
-  margin-right: 1.5rem;
   text-decoration: none;
   color: #fff;
+  padding: 0.87rem;
 }
 
-nav .menu :last-child {
-  margin-right: 0;
+nav .menu a:hover {
+  background-color: #292828;
 }
 
 nav .burger {
@@ -104,14 +105,34 @@ nav .burger .bar {
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
+  nav .logo {
+    font-size: 1.3em;
+  }
+  nav .menu {
+    font-size: 0.6em;
+  }
+  nav .menu a {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  nav {
+    height: 3rem;
+  }
   nav .menu {
     display: none;
   }
   nav .burger {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: inline;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav .logo {
+    font-size: 1.5em;
   }
 }
 
@@ -196,7 +217,7 @@ nav .burger .bar {
   margin-top: 0.3rem;
   margin-bottom: 0.4rem;
   font-family: Quicksand;
-  font-size: 0.6em;
+  font-size: 0.7em;
   font-weight: 300;
   letter-spacing: 0.1rem;
   text-indent: 0.1rem;
@@ -213,16 +234,32 @@ nav .burger .bar {
   text-align: center;
 }
 
+@media only screen and (max-width: 1500px) {
+  .hero .company-name {
+    font-size: 2.3em;
+  }
+  .hero .sub-heading {
+    font-size: 0.8em;
+  }
+  .hero .hero-contacts {
+    font-size: 0.6em;
+    width: 20rem;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
+  .hero .company-profile-wrapper {
+    width: 25rem;
+  }
   .hero .company-profile-wrapper::before, .hero .company-profile-wrapper::after {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
   .hero .company-name {
-    font-size: 2.8em;
+    font-size: 2.6em;
   }
   .hero .sub-heading {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   .hero .hero-contacts {
     font-size: 0.7em;
@@ -232,28 +269,39 @@ nav .burger .bar {
 
 @media only screen and (max-width: 600px) {
   .hero .company-profile-wrapper {
-    width: 20rem;
+    width: 21rem;
   }
   .hero .company-profile-wrapper::before, .hero .company-profile-wrapper::after {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
   }
   .hero .company-name {
-    font-size: 2.7em;
+    font-size: 2.8em;
   }
   .hero .sub-heading {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   .hero .hero-contacts {
-    font-size: 0.75em;
-    width: 18rem;
-    margin-top: 1rem;
+    font-size: 0.85em;
+    width: 22rem;
+    margin-top: 0.5rem;
   }
 }
 
 @media only screen and (max-width: 400px) {
   .hero .company-profile-wrapper::before, .hero .company-profile-wrapper::after {
+    width: 18rem;
+  }
+  .hero .company-name {
+    font-size: 2.6em;
+  }
+  .hero .sub-heading {
+    font-size: 1em;
+  }
+  .hero .hero-contacts {
+    font-size: 0.9em;
     width: 17rem;
+    margin-top: 0.3rem;
   }
 }
 
@@ -314,6 +362,32 @@ nav .burger .bar {
   font-weight: 400;
   letter-spacing: 0.02rem;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .welcome .welcome-heading {
+    font-size: 1.7em;
+  }
+  .welcome .welcome-paragraph {
+    font-size: 0.6em;
+    line-height: 1.2rem;
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .welcome .welcome-heading {
+    font-size: 2em;
+  }
+  .welcome .welcome-paragraph {
+    font-size: 0.69em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .welcome .welcome-paragraph {
+    font-size: 0.7em;
+  }
 }
 
 .gallery {

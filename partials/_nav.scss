@@ -11,34 +11,33 @@ nav {
 
   .logo {
     color: $accents-color;
+    letter-spacing: 0.2rem;
+    text-indent: 0.2rem;
+    cursor: default;
+
+    position: relative;
+    left: 8%;
 
     font: {
       family: $heading-font;
       size: 1.1em;
     }
-
-    letter-spacing: 0.2rem;
-    text-indent: 0.2rem;
-
-    position: relative;
-    left: 8%;
   }
 
   .menu {
     font-family: $heading-font;
-    font-size: 0.5em;
+    font-size: 0.52em;
     font-weight: 600;
     position: relative;
     right: 8%;
 
     a {
-      margin-right: 1.5rem;
       text-decoration: none;
       color: $text-color;
-    }
-
-    :last-child {
-      margin-right: 0;
+      padding: 0.87rem;
+      &:hover {
+        background-color: #292828;
+      }
     }
   }
 
@@ -67,25 +66,53 @@ nav {
       0% {
         transform: rotate(0deg);
       }
+
       100% {
         transform: rotate(90deg);
       }
     }
   }
 
-  @media only screen and (max-width: 1000px) {
-    .menu {
-      display: none;
-    }
+  @media only screen and (max-width: $breakpoint-tablet-landscape) {
+    & {
+      .logo {
+        font-size: 1.3em;
+      }
+      .menu {
+        font-size: 0.6em;
 
-    .burger {
-      display: inline-flex;
+        a {
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    & {
+      height: 3rem;
+      .menu {
+        display: none;
+      }
+
+      .burger {
+        display: inline;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    & {
+      .logo {
+        font-size: 1.5em;
+      }
     }
   }
 }
 
 .lineAnimation .bar1 {
-  transform: translate(0rem, 0.45rem) rotate(-45deg);
+  transform: translate(0rem, 0.3rem) rotate(-45deg);
 }
 
 .lineAnimation .bar2 {
@@ -93,5 +120,5 @@ nav {
 }
 
 .lineAnimation .bar3 {
-  transform: translate(0rem, -0.45rem) rotate(45deg);
+  transform: translate(0rem, -0.3rem) rotate(45deg);
 }

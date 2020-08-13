@@ -42,7 +42,7 @@
     margin-bottom: 0.4rem;
     font: {
       family: $paragraph-font;
-      size: 0.6em;
+      size: 0.7em;
       weight: 300;
     }
     letter-spacing: 0.1rem;
@@ -60,66 +60,98 @@
     margin-right: 10vw;
     text-align: center;
   }
-}
 
-@media only screen and (max-width: $breakpoint-tablet-landscape) {
-  .hero {
-    .company-profile-wrapper {
-      &::before,
-      &::after {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+  @media only screen and (max-width: 1500px) {
+    & {
+      .company-name {
+        font-size: 2.3em;
+      }
+
+      .sub-heading {
+        font-size: 0.8em;
+      }
+
+      .hero-contacts {
+        font-size: 0.6em;
+        width: 20rem;
       }
     }
-
-    .company-name {
-      font-size: 2.8em;
-    }
-    .sub-heading {
-      font-size: 1em;
-    }
-
-    .hero-contacts {
-      font-size: 0.7em;
-      width: 20rem;
-    }
   }
-}
 
-@media only screen and (max-width: $breakpoint-mobile) {
-  .hero {
-    .company-profile-wrapper {
-      width: 20rem;
+  @media only screen and (max-width: $breakpoint-tablet-landscape) {
+    & {
+      .company-profile-wrapper {
+        width: 25rem;
+        &::before,
+        &::after {
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+        }
+      }
 
-      &::before,
-      &::after {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+      .company-name {
+        font-size: 2.6em;
+      }
+
+      .sub-heading {
+        font-size: 0.9em;
+      }
+
+      .hero-contacts {
+        font-size: 0.7em;
+        width: 20rem;
       }
     }
+  }
 
-    .company-name {
-      font-size: 2.7em;
-    }
+  @media only screen and (max-width: $breakpoint-mobile) {
+    & {
+      .company-profile-wrapper {
+        width: 21rem;
 
-    .sub-heading {
-      font-size: 0.85em;
-    }
+        &::before,
+        &::after {
+          margin-top: 2.5rem;
+          margin-bottom: 2.5rem;
+        }
+      }
 
-    .hero-contacts {
-      font-size: 0.75em;
-      width: 18rem;
-      margin-top: 1rem;
+      .company-name {
+        font-size: 2.8em;
+      }
+
+      .sub-heading {
+        font-size: 0.9em;
+      }
+
+      .hero-contacts {
+        font-size: 0.85em;
+        width: 22rem;
+        margin-top: 0.5rem;
+      }
     }
   }
-}
 
-@media only screen and (max-width: 400px) {
-  .hero {
-    .company-profile-wrapper {
-      &::before,
-      &::after {
+  @media only screen and (max-width: 400px) {
+    & {
+      .company-profile-wrapper {
+        &::before,
+        &::after {
+          width: 18rem;
+        }
+      }
+      .company-name {
+        font-size: 2.6em;
+      }
+
+      .sub-heading {
+        font-size: 1em;
+      }
+
+      .hero-contacts {
+        font-size: 0.9em;
         width: 17rem;
+        margin-top: 0.3rem;
       }
     }
   }

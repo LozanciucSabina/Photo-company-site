@@ -4,11 +4,6 @@
   background-color: $main-backgr-color;
   color: $text-color;
 
-  // & > * {
-  //   position: relative;
-  //   margin-top: 1em;
-  // }
-
   .horizontal-line {
     @include line;
     margin-bottom: 1.6rem;
@@ -27,5 +22,39 @@
 
   button {
     @include button-style(7.2rem, 2.3rem);
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet-landscape) {
+    & {
+      .welcome-heading {
+        font-size: 1.7em;
+      }
+
+      .welcome-paragraph {
+        font-size: 0.6em;
+        line-height: 1.2rem;
+        width: 60%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    & {
+      .welcome-heading {
+        font-size: 2em;
+      }
+
+      .welcome-paragraph {
+        font-size: 0.69em;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    & {
+      .welcome-paragraph {
+        font-size: 0.7em;
+      }
+    }
   }
 }

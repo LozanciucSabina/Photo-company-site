@@ -19,30 +19,31 @@ nav {
 
 nav .logo {
   color: #e5b13b;
-  font-family: Cormorant SC;
-  font-size: 1.1em;
   letter-spacing: 0.2rem;
   text-indent: 0.2rem;
+  cursor: default;
   position: relative;
   left: 8%;
+  font-family: Cormorant SC;
+  font-size: 1.1em;
 }
 
 nav .menu {
   font-family: Cormorant SC;
-  font-size: 0.5em;
+  font-size: 0.52em;
   font-weight: 600;
   position: relative;
   right: 8%;
 }
 
 nav .menu a {
-  margin-right: 1.5rem;
   text-decoration: none;
   color: #fff;
+  padding: 0.87rem;
 }
 
-nav .menu :last-child {
-  margin-right: 0;
+nav .menu a:hover {
+  background-color: #292828;
 }
 
 nav .burger {
@@ -104,20 +105,40 @@ nav .burger .bar {
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
+  nav .logo {
+    font-size: 1.3em;
+  }
+  nav .menu {
+    font-size: 0.6em;
+  }
+  nav .menu a {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  nav {
+    height: 3rem;
+  }
   nav .menu {
     display: none;
   }
   nav .burger {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: inline;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav .logo {
+    font-size: 1.5em;
   }
 }
 
 .lineAnimation .bar1 {
-  -webkit-transform: translate(0rem, 0.45rem) rotate(-45deg);
-          transform: translate(0rem, 0.45rem) rotate(-45deg);
+  -webkit-transform: translate(0rem, 0.3rem) rotate(-45deg);
+          transform: translate(0rem, 0.3rem) rotate(-45deg);
 }
 
 .lineAnimation .bar2 {
@@ -125,8 +146,8 @@ nav .burger .bar {
 }
 
 .lineAnimation .bar3 {
-  -webkit-transform: translate(0rem, -0.45rem) rotate(45deg);
-          transform: translate(0rem, -0.45rem) rotate(45deg);
+  -webkit-transform: translate(0rem, -0.3rem) rotate(45deg);
+          transform: translate(0rem, -0.3rem) rotate(45deg);
 }
 
 .hero {
@@ -196,7 +217,7 @@ nav .burger .bar {
   margin-top: 0.3rem;
   margin-bottom: 0.4rem;
   font-family: Quicksand;
-  font-size: 0.6em;
+  font-size: 0.7em;
   font-weight: 300;
   letter-spacing: 0.1rem;
   text-indent: 0.1rem;
@@ -213,16 +234,32 @@ nav .burger .bar {
   text-align: center;
 }
 
+@media only screen and (max-width: 1500px) {
+  .hero .company-name {
+    font-size: 2.3em;
+  }
+  .hero .sub-heading {
+    font-size: 0.8em;
+  }
+  .hero .hero-contacts {
+    font-size: 0.6em;
+    width: 20rem;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
+  .hero .company-profile-wrapper {
+    width: 25rem;
+  }
   .hero .company-profile-wrapper::before, .hero .company-profile-wrapper::after {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
   .hero .company-name {
-    font-size: 2.8em;
+    font-size: 2.6em;
   }
   .hero .sub-heading {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   .hero .hero-contacts {
     font-size: 0.7em;
@@ -232,28 +269,39 @@ nav .burger .bar {
 
 @media only screen and (max-width: 600px) {
   .hero .company-profile-wrapper {
-    width: 20rem;
+    width: 21rem;
   }
   .hero .company-profile-wrapper::before, .hero .company-profile-wrapper::after {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
   }
   .hero .company-name {
-    font-size: 2.7em;
+    font-size: 2.8em;
   }
   .hero .sub-heading {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   .hero .hero-contacts {
-    font-size: 0.75em;
-    width: 18rem;
-    margin-top: 1rem;
+    font-size: 0.85em;
+    width: 22rem;
+    margin-top: 0.5rem;
   }
 }
 
 @media only screen and (max-width: 400px) {
   .hero .company-profile-wrapper::before, .hero .company-profile-wrapper::after {
+    width: 18rem;
+  }
+  .hero .company-name {
+    font-size: 2.6em;
+  }
+  .hero .sub-heading {
+    font-size: 1em;
+  }
+  .hero .hero-contacts {
+    font-size: 0.9em;
     width: 17rem;
+    margin-top: 0.3rem;
   }
 }
 
@@ -316,6 +364,48 @@ nav .burger .bar {
   cursor: pointer;
 }
 
+.welcome button:hover {
+  border-color: #e5b13b;
+  color: #e5b13b;
+}
+
+.welcome button:active {
+  -webkit-box-shadow: 0px 0px 5px #e5b13b;
+          box-shadow: 0px 0px 5px #e5b13b;
+}
+
+@media only screen and (max-width: 600px) {
+  .welcome button {
+    font-size: 0.75em;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .welcome .welcome-heading {
+    font-size: 1.7em;
+  }
+  .welcome .welcome-paragraph {
+    font-size: 0.6em;
+    line-height: 1.2rem;
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .welcome .welcome-heading {
+    font-size: 2em;
+  }
+  .welcome .welcome-paragraph {
+    font-size: 0.69em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .welcome .welcome-paragraph {
+    font-size: 0.7em;
+  }
+}
+
 .gallery {
   display: -ms-grid;
   display: grid;
@@ -345,11 +435,18 @@ nav .burger .bar {
 }
 
 .gallery .photo-category .horizontal-line {
+  position: relative;
   background-color: #e5b13b;
   height: 0.09em;
   border-radius: 1em;
   display: block;
   width: 4.7em;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
 
 .gallery .photo-category .category-name {
@@ -435,19 +532,18 @@ nav .burger .bar {
   font-size: 0.55em;
   color: white;
   line-height: 1rem;
-  width: 75%;
-  height: 1.5rem;
+  height: 1.7rem;
   background-color: #1b1b1b;
   border: none;
   outline: none;
   text-align: center;
+  width: 22rem;
+  resize: none;
 }
 
 .contact-form-wrapper form textarea {
-  min-height: 4.5rem;
   max-height: 7rem;
-  max-width: 21rem;
-  min-width: 21rem;
+  min-height: 5rem;
   overflow-x: hidden;
 }
 
@@ -456,7 +552,7 @@ nav .burger .bar {
   outline: none;
   border: 0.02rem solid white;
   color: #fff;
-  width: 5rem;
+  width: 7.2rem;
   height: 2.3rem;
   font-family: Cormorant SC;
   font-size: 0.55em;
@@ -464,6 +560,58 @@ nav .burger .bar {
   letter-spacing: 0.02rem;
   cursor: pointer;
   margin-top: 0.7rem;
+}
+
+.contact-form-wrapper form input[type="button"]:hover {
+  border-color: #e5b13b;
+  color: #e5b13b;
+}
+
+.contact-form-wrapper form input[type="button"]:active {
+  -webkit-box-shadow: 0px 0px 5px #e5b13b;
+          box-shadow: 0px 0px 5px #e5b13b;
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-form-wrapper form input[type="button"] {
+    font-size: 0.75em;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .contact-form-wrapper .contact-heading {
+    font-size: 1.7em;
+  }
+  .contact-form-wrapper form input:not([type="button"]),
+  .contact-form-wrapper form textarea {
+    font-size: 0.65em;
+    line-height: 1.3rem;
+    width: 20rem;
+    height: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .contact-form-wrapper form input:not([type="button"]),
+  .contact-form-wrapper form textarea {
+    font-size: 0.7em;
+    line-height: 1.5rem;
+    height: 1.7rem;
+    width: 24rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-form-wrapper .contact-heading {
+    font-size: 2em;
+  }
+  .contact-form-wrapper form input:not([type="button"]),
+  .contact-form-wrapper form textarea {
+    font-size: 0.8em;
+    line-height: 2rem;
+    height: 2.5rem;
+    width: 20rem;
+  }
 }
 
 footer {
@@ -502,7 +650,7 @@ footer button {
   outline: none;
   border: 0.02rem solid white;
   color: #fff;
-  width: 7rem;
+  width: 7.2rem;
   height: 2.3rem;
   font-family: Cormorant SC;
   font-size: 0.55em;
@@ -511,6 +659,22 @@ footer button {
   cursor: pointer;
   background-color: transparent;
   margin-right: 1em;
+}
+
+footer button:hover {
+  border-color: #e5b13b;
+  color: #e5b13b;
+}
+
+footer button:active {
+  -webkit-box-shadow: 0px 0px 5px #e5b13b;
+          box-shadow: 0px 0px 5px #e5b13b;
+}
+
+@media only screen and (max-width: 600px) {
+  footer button {
+    font-size: 0.75em;
+  }
 }
 
 footer .buttons-wrapper {
@@ -546,6 +710,38 @@ footer .copyrights {
 footer a {
   color: #e5b13b;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  footer .footer-heading {
+    font-size: 1.7em;
+  }
+  footer .contact-info {
+    font-size: 0.65em;
+    line-height: 1.3rem;
+    width: 20rem;
+    height: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  footer .contact-info {
+    font-size: 0.7em;
+    line-height: 1.5rem;
+    height: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  footer .footer-heading {
+    font-size: 2em;
+  }
+  footer .contact-info {
+    font-size: 0.8em;
+    line-height: 2rem;
+    height: 2.5rem;
+    width: 20rem;
+  }
 }
 
 * {
